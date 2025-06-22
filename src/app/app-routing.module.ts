@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { OffreComponent } from './offre/offre.component';
 import { UserComponent } from './user/user.component';
 import { AddOffreComponent } from './offre/addOffre.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: '', component: OffreComponent},
@@ -10,6 +11,7 @@ const routes: Routes = [
   {path: 'addOffre', component: AddOffreComponent},
   {path: 'updateOffre/:id', component: AddOffreComponent},
   {path: 'user', component: UserComponent},
+  {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: ''}
 ];
 

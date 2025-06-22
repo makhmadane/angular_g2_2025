@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { AddOffreComponent } from './offre/addOffre.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OffreComponent,
     UserComponent,
-    AddOffreComponent
+    AddOffreComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
