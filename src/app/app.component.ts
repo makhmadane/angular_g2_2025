@@ -13,6 +13,11 @@ export class AppComponent {
   constructor(private authService : AuthService, private router :Router){
 
   }
+
+  isAuthenticated(){
+    return this.authService.isAuthenticated();
+  }
+
   logOut(){
     this.authService.logout().subscribe(
       ()=>{

@@ -4,6 +4,7 @@ import { Login } from '../models/login';
 import { Register } from '../models/Register';
 import { Token } from '@angular/compiler';
 import { TokenResponse } from '../models/token';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class AuthService {
 
   constructor(private httpclient :HttpClient) { }
 
-  private baseUrl = 'http://localhost:8000/api';
+  private baseUrl = environment.apiURL;
   private authorization = new HttpHeaders({
         'Authorization' : "Bearer " + this.getToken()
       });
@@ -41,6 +42,9 @@ export class AuthService {
     return this.httpclient.post(`${this.baseUrl}/logout`, {}, { headers: this.authorization  });
   }
 
+  isAuthenticated(){
+    return !!this.getToken();
+  }
 
 
 }
